@@ -1,0 +1,77 @@
+.mi-card {
+    background-image: url(../../../assets/main_background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    .content {
+        background-color: rgba($color: #000000, $alpha: 0.7);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        .person-card {
+            width: 395px;
+            max-width: 395px;
+            background: #fff;
+            border: 1px solid rgb(97, 97, 97);
+            header {
+                background-image: url(../../../assets/miHeaderBackground.svg);
+                padding: 1.5rem 1rem;
+                h1 {
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: #fff;
+                    margin-top: .5rem;
+                }
+                h3 {
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #fff;
+                }
+                h4 {
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: #C3C3C3;
+                }
+            }
+            article {
+                padding: .5rem 1rem 3rem 1rem;
+                background-color: #F8F4EA;
+                text-align: center;
+                .action-buttons {
+                    display: flex;
+                    justify-content: space-between;
+                    // align-items: center;
+                    margin-block: 2rem;
+                    label {
+                        color: #484848;
+                        font-size: 14px;
+                        margin-left: .5rem;
+                        padding-right: .3rem;
+                    }
+                    a {
+                        background-color: #484848;
+                        color: #fff;
+                        border-radius: 5px;
+                        padding: 5px 5px;
+                        font-size: 14px;
+                        min-width: 87px;
+                        display: inline-block;
+                        text-decoration: none;
+                        border: none;
+                    }
+                }
+                .contactBtn{
+                    border: none;
+                    width: 240px;
+                    height: 57px;
+                    background-color: #fff;
+                    box-shadow: #A77F3E .3px .3px .3px .3px;
+                    border: solid #A77F3E 1px;
+                    border-radius: 5px;
+                }
+            }
+        } 
+    }
+}
