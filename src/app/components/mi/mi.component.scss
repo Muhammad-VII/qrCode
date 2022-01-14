@@ -15,6 +15,27 @@ $main-theme: #A77F3E;
             width: 395px;
             max-width: 395px;
             background: #fff;
+            .personImgContainer {
+                position: relative;
+                .personImg {
+                    width: 100px;
+                    height: 100px;
+                    border: 4px $main-theme solid;
+                    border-radius: 50px;
+                }
+                .companyImg {
+                    width: 30px;
+                    height: 30px;
+                    position: absolute;
+                    bottom: 0;
+                    left: 70px;
+                    border: 3px solid $main-theme;
+                    border-radius: 50px;
+                    background-color: #fff;
+                    padding: 3px;
+                }
+
+            }
             header {
                 background-image: url(../../../assets/miHeaderBackground.svg);
                 padding: 1.5rem 1rem;

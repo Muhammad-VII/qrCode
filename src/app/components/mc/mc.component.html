@@ -2,60 +2,59 @@
     <div class="content">
         <div class="person-card">
             <header>
-                <img src="assets/mc/Ellipse 1.png" height="115px" width="115px">
-                <h1>Ahmed Magdy</h1>
-                <h3>Human Resources Manager</h3>
-                <h4>At Maxim Consultancy</h4>
+                <img src="{{cardInfo.PhotoPath}}" class="personImg" height="115px" width="115px">
+                <h1>{{cardInfo.Fname}} {{cardInfo.Lname}}</h1>
+                <h3>{{cardInfo.JopTitle}}</h3>
+                <h4>At {{cardInfo.CompanyName}}</h4>
             </header>
             <article>
                 <div class="action-buttons">
                     <div>
                         <img src="assets/mc/icons/phone.png" alt="">
-                        <label for="makeCallBtn">01100001111</label>
+                        <label for="makeCallBtn">{{cardInfo.Phone1}}</label>
                     </div>
                     <div>
-                        <a id="makeCallBtn" href="tel:011-000-01111">Call</a>
+                        <a id="makeCallBtn" href="{{'tel:'+cardInfo.Phone1}}">Call</a>
                     </div>
                 </div>
 
                 <div class="action-buttons">
                     <div>
                         <img src="assets/mc/icons/email.png" alt="">
-                        <label for="makeCallBtn">John@mc.com</label>
+                        <label for="makeCallBtn">{{cardInfo.Email}}</label>
                     </div>
                     <div>
-                        <a href="mailto:John@mc.com" id="emailBtn">Email</a>
+                        <a href="mailto:{{cardInfo.Email}}" id="emailBtn">Email</a>
                     </div>
                 </div>
 
                 <div class="action-buttons">
                     <div>
                         <img src="assets/mc/icons/website.png" alt="">
-                        <label for="makeCallBtn">https://maximig.com</label>
+                        <label for="makeCallBtn">{{cardInfo.Website}}</label>
                     </div>
                     <div>
-                        <a href="https://maximig.com" id="visitBtn">Visit</a>
+                        <a href="{{cardInfo.Website}}" id="visitBtn">Visit</a>
                     </div>
                 </div>
 
                 <div class="action-buttons">
                     <div class="d-flex align-items-start">
                         <img src="assets/mc/icons/location.png" alt="">
-                        <label for="makeCallBtn" class="text-start">Al Multaqah El Araby, Nasr Road, Sheraton 147
-                            Cairo, Heliopolis, Egypt</label>
+                        <label for="makeCallBtn" class="text-start">{{cardInfo.Location}}</label>
                     </div>
                     <div>
-                        <a target="_blank" href="https://goo.gl/maps/DZwUMaefnMtrHQxj9" id="navBtn">Navigate</a>
+                        <a target="_blank" href="https://www.google.com/maps/search/?api=1&query={{cardInfo.Lat}},{{cardInfo.Lng}}" id="navBtn">Navigate</a>
                     </div>
                 </div>
                 <div class="social-media">
                     <h3>Social Media</h3>
                     <div class="row">
-                        <div class="col"><a href="" target="_blanc"><img src="assets/mc/icons/facebook.png"></a></div>
-                        <div class="col"><a href="" target="_blanc"><img src="assets/mc/icons/Linked.png"></a></div>
-                        <div class="col"><a href="" target="_blanc"><img src="assets/mc/icons/Instagram.png"></a></div>
-                        <div class="col"><a href="" target="_blanc"><img src="assets/mc/icons/twitter.png"></a></div>
-                        <div class="col"><a href="" target="_blanc"><img src="assets/mc/icons/behance.png"></a></div>
+                        <div class="col"><a href="{{cardInfo.Facebook}}" target="_blanc"><img src="assets/mc/icons/facebook.png"></a></div>
+                        <div class="col"><a href="{{cardInfo.Linkedin}}" target="_blanc"><img src="assets/mc/icons/Linked.png"></a></div>
+                        <div class="col"><a href="{{cardInfo.Instagram}}" target="_blanc"><img src="assets/mc/icons/Instagram.png"></a></div>
+                        <div class="col"><a href="{{cardInfo.Twitter}}" target="_blanc"><img src="assets/mc/icons/twitter.png"></a></div>
+                        <div class="col"><a href="{{cardInfo.Behance}}" target="_blanc"><img src="assets/mc/icons/behance.png"></a></div>
                     </div>
                 </div>
                   <button class="contactBtn" id="downloadButtonNormal" [vcdDownloadVCard]="vCard">

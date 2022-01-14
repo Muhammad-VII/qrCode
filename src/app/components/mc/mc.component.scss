@@ -15,6 +15,12 @@ $main-theme: #11828F;
             width: 395px;
             max-width: 395px;
             background: #fff;
+            .personImg {
+                width: 115px;
+                height: 115px;
+                border: 4px $main-theme solid;
+                border-radius: 100px;
+            }
             header {
                 background-image: url(../../../assets/mc/mcbg.png);
                 background-size: cover;
