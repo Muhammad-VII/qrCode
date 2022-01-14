@@ -23,12 +23,12 @@ export class MiComponent implements OnInit {
           this.cardInfo = res[0]
           this.vCard = {
           name: {
-            firstNames: this.cardInfo.Fname,
-            lastNames: this.cardInfo.Lname,
+            firstNames: this.cardInfo?.Fname,
+            lastNames: this.cardInfo?.Lname,
           },
           telephone: [
-            this.cardInfo.Phone1,
-            this.cardInfo.Phone2,
+            this.cardInfo?.Phone1,
+            this.cardInfo?.Phone2,
           ]
         };
         }
