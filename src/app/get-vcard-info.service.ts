@@ -1,15 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GetVcardInfoService {
   constructor(private _HttpClient:HttpClient) { }
-
+  show404 = new BehaviorSubject(false);
   getVcardInfo(id:string): Observable<any> {
     const jsonForm: FormGroup = new FormGroup({
       SmallId: new FormControl(id),
