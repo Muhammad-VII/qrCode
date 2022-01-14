@@ -1,25 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-declare const $:any
 @Component({
   selector: 'app-loader',
   templateUrl: './loader.component.html',
-  styleUrls: ['./loader.component.scss']
+  styleUrls: ['./loader.component.scss'],
 })
 export class LoaderComponent implements OnInit {
-
-  constructor(public _Router:Router) {
-    let fade = function() {
-      $('main').fadeOut(2000, () => {
-        $("body").css("overflow", "auto");
-      });
-    } 
-    $(document).ready(function () {
-      setTimeout(fade,1500)
-    });
-  }
-
+  constructor(public _Router: Router) {}
   ngOnInit(): void {
+    const loaderDiv = document.querySelector('main')! as HTMLDivElement;
+    const body = document.querySelector('body')! as HTMLBodyElement;
+    window.onload = () => {
+      setTimeout(() => {
+        loaderDiv.style.opacity = '0';
+      },1500);
+      setTimeout(() => {
+        body.style.overflow = 'auto';
+        loaderDiv.style.display = 'none';
+      },3300);
+    };
   }
-
 }
