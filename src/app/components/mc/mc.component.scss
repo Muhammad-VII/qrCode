@@ -1,5 +1,5 @@
-$main-theme: #A77F3E;
-.mi-card {
+$main-theme: #11828F;
+.mc-card {
     background-image: url(../../../assets/main_background.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -16,28 +16,31 @@ $main-theme: #A77F3E;
             max-width: 395px;
             background: #fff;
             header {
-                background-image: url(../../../assets/miHeaderBackground.svg);
+                background-image: url(../../../assets/mc/mcbg.png);
+                background-size: cover;
+                background-position: center center;
                 padding: 1.5rem 1rem;
+                text-align: center;
                 h1 {
                     font-size: 20px;
-                    font-weight: bold;
-                    color: #fff;
+                    font-weight: normal;
+                    color: $main-theme;
                     margin-top: .5rem;
                 }
                 h3 {
                     font-size: 16px;
                     font-weight: 400;
-                    color: #fff;
+                    color: #000;
                 }
                 h4 {
                     font-size: 14px;
                     font-weight: 400;
-                    color: #C3C3C3;
+                    color: #7E7E7E;
                 }
             }
             article {
                 padding: .5rem 1rem 3rem 1rem;
-                background-color: #F8F4EA;
+                background-color: #fff;
                 text-align: center;
                 .action-buttons {
                     display: flex;
@@ -66,7 +69,7 @@ $main-theme: #A77F3E;
                     flex-direction: column;
                     align-items: center;
                     padding: 1rem 0;
-                    border-top: #ECE3D0 solid 2px;
+                    border-top: #DBECEE solid 2px;
                     h3 {
                         font-size: 16px;
                         font-weight: bold;

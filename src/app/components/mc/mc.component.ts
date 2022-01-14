@@ -1,17 +1,15 @@
+import { VCard } from 'ngx-vcard';
 import { Component, OnInit } from '@angular/core';
-import { VCard } from "ngx-vcard";
 
 @Component({
-  selector: 'app-mi',
-  templateUrl: './mi.component.html',
-  styleUrls: ['./mi.component.scss']
+  selector: 'app-mc',
+  templateUrl: './mc.component.html',
+  styleUrls: ['./mc.component.scss']
 })
-export class MiComponent implements OnInit {
+export class McComponent implements OnInit {
 
   constructor() { }
-  
-  ngOnInit(): void {
-  }
+
   public vCard: VCard = {
     name: {
       firstNames: "Ahmed",
@@ -21,4 +19,8 @@ export class MiComponent implements OnInit {
       "01100001111"
     ]
   };
+
+  ngOnInit(): void {
+  }
+  
 }
