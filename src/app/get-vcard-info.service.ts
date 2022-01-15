@@ -24,4 +24,16 @@ export class GetVcardInfoService {
     })
     return this._HttpClient.post("https://eams-api.azurewebsites.net/AddToContact",jsonForm.value)
   }
+
+  fade(): void {
+    const loaderDiv = document.querySelector('main')! as HTMLDivElement;
+    const body = document.querySelector('body')! as HTMLBodyElement;
+      setTimeout(() => {
+        loaderDiv.style.opacity = '0';
+      },1500);
+      setTimeout(() => {
+        body.style.overflow = 'auto';
+        loaderDiv.style.display = 'none';
+      },3300);
+    }
 }

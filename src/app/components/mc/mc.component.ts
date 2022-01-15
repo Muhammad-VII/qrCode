@@ -14,6 +14,7 @@ export class McComponent implements OnInit {
   id!:string;
   public vCard!:VCard;
   constructor(private _VcardService:GetVcardInfoService, private _ActivatedRoute: ActivatedRoute, private _Router: Router) {
+    
     this._ActivatedRoute.params.subscribe((params:any) => {
       this.id = params['id']
       this._VcardService.getVcardInfo(this.id).subscribe((res) => {
@@ -21,6 +22,7 @@ export class McComponent implements OnInit {
         {
           this._Router.navigate(['idRequired'])
         } else {
+          this._VcardService.fade()
           this.cardInfo = res[0]
           this.vCard = {
           name: {

@@ -20,6 +20,7 @@ export class MiComponent implements OnInit {
         {
           this._Router.navigate(['idRequired'])
         } else {
+          this._VcardService.fade()
           this.cardInfo = res[0]
           this.vCard = {
           name: {
